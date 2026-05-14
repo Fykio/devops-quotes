@@ -159,10 +159,8 @@
 
     <script>
         (function () {
-            // --------------------------------------------------------------
-            // 20 hand-picked DevOps quotes (realistic & inspiring)
-            // and 20 matching authors (separate arrays)
-            // --------------------------------------------------------------
+            //now 21 hand-picked DevOps quotes (realistic & inspiring)
+            // and 21 matching authors (separate arrays)
             const devopsQuotes = [
                 "You build it, you run it.",
                 "Infrastructure as Code is not just a practice, it’s a mindset for modern operations.",
@@ -183,7 +181,8 @@
                 "Without metrics and monitoring, you are flying blind in the cloud.",
                 "Treat your infrastructure like application code: with tests, reviews, and design patterns.",
                 "Culture eats strategy for breakfast — and that doubles for DevOps.",
-                "Resilience and adaptability matter more than rigid compliance."
+                "Resilience and adaptability matter more than rigid compliance.",
+                "Don't take a snapshot of bad code."
             ];
 
             const authorsList = [
@@ -206,21 +205,23 @@
                 "Jez Humble & Nicole Forsgren",
                 "Kelsey Hightower",
                 "Patrick Debois",
-                "Jeffrey Snover"
+                "Jeffrey Snover",
+                "Olufemi Akinboye"
             ];
 
-            // safety: ensure both arrays have exactly 20 items
+            // safety: ensure both arrays have exactly 21 items
             // (they already do, but we validate for robustness)
-            if (devopsQuotes.length !== 20 || authorsList.length !== 20) {
+            // there's probably a better way to go about this but I can't write javascript to save my life so I'm changing 20 to 21.
+            if (devopsQuotes.length !== 21 || authorsList.length !== 21) {
                 console.warn("Quote/author arrays length mismatch. Adjusting to 20 items.");
                 // fallback: extend or trim if needed, but not required for final
-                while (devopsQuotes.length < 20) devopsQuotes.push("DevOps bridges people and automation.");
-                while (authorsList.length < 20) authorsList.push("DevOps Community");
+                while (devopsQuotes.length < 21) devopsQuotes.push("DevOps bridges people and automation.");
+                while (authorsList.length < 21) authorsList.push("DevOps Community");
             }
 
             // helper: random integer between 1 and 20 (both inclusive)
             function getRandomIndex() {
-                return Math.floor(Math.random() * 20) + 1;   // returns 1 .. 20
+                return Math.floor(Math.random() * 21) + 1;   // returns 1 .. 20
             }
 
             // select quote + author based on random number
