@@ -4,7 +4,9 @@ This is a simple static HTML page that displays DevOps-related quotes randomly a
 
 ## Files
 
+- `index.css`: The CSS file for styling the page.
 - `index.html`: The main page containing the quotes.
+- `index.js`: The JavaScript file for displaying the quotes.
 - `README.md`: This file.
 
 ## How to Use
